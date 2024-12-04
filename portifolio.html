@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Portfólio</title>
+    <link rel="stylesheet" href="portifolio-styles.css">
+</head>
+<body>
+
+    <div class="navbar">
+
+        <div class="menu-button">
+
+            <button id="menuToggle">Menu</button>
+
+            <div class="dropdown" id="menuDropdown">
+
+                <a href="sobre-mim.html">Sobre Mim</a>
+                <a href="formacoes.html">Formação</a>
+                <a href="portifolio.html">Portfólio</a>
+                <a href="contato.html">Contato</a>
+            </div>
+        </div>
+
+        <a href="index.html" class="voltar-button">Voltar</a>
+    </div>
+
+    <script>
+
+        const menuToggle = document.getElementById('menuToggle');
+        const menuDropdown = document.getElementById('menuDropdown');
+
+        menuToggle.addEventListener('click', () => {
+            menuDropdown.classList.toggle('show');
+        });
+
+        window.addEventListener('click', (e) => {
+            if (!menuToggle.contains(e.target) && !menuDropdown.contains(e.target)) {
+                menuDropdown.classList.remove('show');
+            }
+        });
+    </script>
+
+    <h1 class="title">Meu portfólio</h1>
+
+    <div class="img-container">
+
+        <img src="imagens/Portifolio-igor.png" alt="imagem do meu portifólio" class="header-image">
+    </div>
+</body>
+</html>

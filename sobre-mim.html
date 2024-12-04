@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre Mim</title>
+    <link rel="stylesheet" href="sobre-styles.css">
+</head>
+<body>
+
+    <div class="navbar">
+
+        <div class="menu-button">
+
+            <button id="menuToggle">Menu</button>
+
+            <div class="dropdown" id="menuDropdown">
+
+                <a href="sobre-mim.html">Sobre Mim</a>
+                <a href="formacoes.html">Formação</a>
+                <a href="portifolio.html">Portfólio</a>
+                <a href="contato.html">Contato</a>
+            </div>
+        </div>
+
+        <a href="index.html" class="voltar-button">Voltar</a>
+    </div>
+
+    <script>
+
+        const menuToggle = document.getElementById('menuToggle');
+        const menuDropdown = document.getElementById('menuDropdown');
+
+        menuToggle.addEventListener('click', () => {
+            menuDropdown.classList.toggle('show');
+        });
+
+        window.addEventListener('click', (e) => {
+            if (!menuToggle.contains(e.target) && !menuDropdown.contains(e.target)) {
+                menuDropdown.classList.remove('show');
+            }
+        });
+    </script>
+
+    <img src="imagens/img-igor1.jpeg" alt="Foto de perfil" class="header-image">
+
+    <h1 class="title">Um pouco sobre mim</h1>
+
+    <textarea class="dialog-box" placeholder=" Sou o Igor, tenho 28 anos e sou uma pessoa muito reservada, costumo sempre ficar na minha e curtir os meus hobbies depois do trabalho. Sou desenvolvedor back-end e meu hobbies favoritos são jogar video games com meus amigos e assistir series e filmes de ficção, comecei na carreira de tecnologia uma pouco mais tarde mas nunca me impediu de alcançar meus objetivos. Sou de Ibirama, Santa Catarina e seja bem vindo(a)"></textarea>
+
+</body>
+</html>

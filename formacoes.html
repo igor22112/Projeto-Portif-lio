@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minhas Formações</title>
+    <link rel="stylesheet" href="formacoes-styles.css">
+</head>
+<body>
+
+    <div class="navbar">
+
+        <div class="menu-button">
+
+            <button id="menuToggle">Menu</button>
+
+            <div class="dropdown" id="menuDropdown">
+
+                <a href="sobre-mim.html">Sobre Mim</a>
+                <a href="formacoes.html">Formação</a>
+                <a href="portifolio.html">Portfólio</a>
+                <a href="contato.html">Contato</a>
+            </div>
+        </div>
+
+        <a href="index.html" class="voltar-button">Voltar</a>
+    </div>
+
+    <script>
+
+        const menuToggle = document.getElementById('menuToggle');
+        const menuDropdown = document.getElementById('menuDropdown');
+
+        menuToggle.addEventListener('click', () => {
+            menuDropdown.classList.toggle('show');
+        });
+
+        window.addEventListener('click', (e) => {
+            if (!menuToggle.contains(e.target) && !menuDropdown.contains(e.target)) {
+                menuDropdown.classList.remove('show');
+            }
+        });
+    </script>
+
+    <img src="imagens/img-igor2.jpg" alt="foto de perfil 2" class="header-image">
+
+    <h1 class="title">Minhas formações</h1>
+
+    <textarea class="dialog-box" placeholder="Tenho formações em alguns cursos profissionalizantes de uma plataforma conhecida como 'Alura', citarei alguns a baixo: "></textarea>
+
+    <ul class="formacoes-lista">
+
+        <li>Formação Aprenda a programar em C# com Orientação a Objetos</li>
+        <li>C#: dominando Orientação a Objetos</li>
+        <li>C#: consumindo API, gravando arquivos e utilizando o LINQ</li>
+        <li>C#: aplique boas práticas de refatoração e torne seu código mais legível</li>
+        <li>C#: aplique princípios SOLID</li>
+    </ul>
+</body>
+</html>
